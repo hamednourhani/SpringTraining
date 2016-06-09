@@ -16,7 +16,7 @@ import org.springframework.context.annotation.ImportResource;
  */
 @Configuration
 @ComponentScan(basePackageClasses = CDPlayerInterface.class)
-@ImportResource("classpath:ir/itstar/Config/SecoundXmlConfig.xml")
+//@ImportResource("classpath:ir/itstar/Config/SecoundXmlConfig.xml")
 public class CDPLayerConfig {
 
 //    @Bean(name="cdcomp")
@@ -24,10 +24,10 @@ public class CDPLayerConfig {
 //        return new FirstCD();
 //    }
 
-//    @Bean
-//    public CDcompact getSecondCDCompact(){
-//        return new SecoundCD("Hamed CD");
-//    }
+    @Bean
+    public CDcompact getSecondCDCompact(){
+        return new SecoundCD("Hamed CD");
+    }
 
     @Bean(name="cDPlayerInterface")
     public CDPlayerInterface getCDPlayer(CDcompact cd){

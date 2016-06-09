@@ -48,7 +48,7 @@ public class CDPLayerTest {
 
     @Test
     public void cdTitleMustEqual(){
-        assertEquals(cdPLayer.getCDTitle() , "CDTITLE");
+        assertEquals(cdPLayer.getCDTitle() , "Hamed CD");
     }
 
     @Test
