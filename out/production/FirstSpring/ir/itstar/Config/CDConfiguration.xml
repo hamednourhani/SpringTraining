@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:component-scan base-package="ir.itstar.CDPlayer"/>
+
+    <!--<bean class="ir.itstar.Config.CDPLayerConfig"></bean>-->
+    <!--<bean id="myCD" class="ir.itstar.CDPlayer.FirstCD"/>-->
+
+    <!--<bean id="sCD" class="ir.itstar.CDPlayer.SecoundCD" >-->
+        <!--<constructor-arg value="Hamed CD"/>-->
+    <!--</bean>-->
+
+    <!--<util:list id="tracksList" value-type="java.lang.String">-->
+        <!--<value>Hamed</value>-->
+        <!--<value>Hamid</value>-->
+
+    <!--</util:list>-->
+
+    <!--<util:list id="players">-->
+        <!--<ref bean="mycdplayer"/>-->
+    <!--</util:list>-->
+
+    <!--<util:properties id="Properss">-->
+        <!--<prop key="one">One</prop>-->
+        <!--<prop key="two">Two</prop>-->
+    <!--</util:properties>-->
+
+    <!--<bean id="blankCD" class="ir.itstar.CDPlayer.BlankCD" p:title="new CD" c:title="new Title" p:tracks-ref="tracksList"-->
+    <!--c:tracks-ref="tracksList"-->
+    <!--&gt;-->
+        <!--<constructor-arg name="title" value="Blank CD"/>-->
+        <!--<constructor-arg name="tracks">-->
+           <!--<null/>-->
+            <!---->
+        <!--</constructor-arg>-->
+        <!--<property name="title" value="New Title"/>-->
+
+    <!--</bean>-->
+
+    <import resource="SecoundXmlConfig.xml"/>
+
+    <bean id="mycdplayer" class="ir.itstar.CDPlayer.CDPlayer" c:cd-ref="thirdCD">
+
+    </bean>
+</beans>
